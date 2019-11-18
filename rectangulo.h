@@ -13,12 +13,7 @@
 #include <stdio.h>
 #include <string.h>
 using namespace std;
-bool inRange(int value, int min, int max);
-bool verify(Rectangulo A, Rectangulo B);
-bool cmp(Rectangulo A, Rectangulo B);
 
-
-vector<string> get_contents();
 
 vector<Rectangulo> organize(vector<string> data);
 

@@ -3,6 +3,9 @@
 #include <vector>
 #include <string>
 #include "rectangulo.h"
+#include "booleans.h"
+#include "read.h"
+
 using namespace std;
 
 int main() {
@@ -10,4 +13,5 @@ int main() {
     data = get_contents();
     vector<Rectangulo> out;
     out = organize(data);
+    write(out);
 }
