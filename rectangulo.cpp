@@ -1,37 +1,7 @@
 #include "rectangulo.h"
-#include<bits/stdc++.h> 
+#include "booleans.h"
 
 using namespace std;
-
-vector<string> get_contents(){
-    vector<string> data;
-    string filename = "rectangulos.in";
-    ifstream input;
-
-    input.open(filename);
-
-    if(!input.is_open()){
-        cerr << "No hay file" << endl;
-    }
-
-    while(input){
-        string line;
-        getline(input, line,'\n');
-        if(line.size() > 0){
-		data.push_back(line);
-        }
-    }
-    input.close();
-
-    return data;
-}
-
-bool comp(Rectangulo& A, Rectangulo& B){
-    return (A.posX < B.posX) ||
-           ((A.posX == B.posX) && (A.r < B.r)) || 
-           ((A.posX == B.posX) && (A.r == B.r) &&
-              (A.c == B.c));
-}
 
 vector <Rectangulo> organize(vector<string> data){
     vector <int> sizes;
@@ -63,7 +33,8 @@ vector <Rectangulo> organize(vector<string> data){
             }
         }
     }
-    sort(thing,reg,comp);
+
+    sort(thing.begin(),thing.end(),comp);
 
     for(const Rectangulo &a : thing){
         cout << a.posX << endl;
@@ -71,21 +42,3 @@ vector <Rectangulo> organize(vector<string> data){
 
     return thing;
 }
-
-bool inRange(int value, int min, int max){
-    return (value >= min) && (value <= max);
-}
-
-bool verify(Rectangulo A, Rectangulo B, tablero tab){
-    bool overlapX = inRange(A.posX, B.posX, B.posX + B.r) ||
-                    inRange(B.posX, A.posX, A.posX + A.r);
-
-    bool overlapY = inRange(A.posY, B.posY, B.posY + B.c) ||
-                    inRange(B.posY, A.posY, A.posY + A.c);
-
-    bool overRangeA = A.c < tab.m && A.r < tab.n;
-    bool overRangeB = B.c < tab.m && B.r < tab.n;   
-    return overlapX && overlapY;
-}
-
-
