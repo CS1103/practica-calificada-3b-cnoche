@@ -7,6 +7,9 @@
 #include <sstream>
 #include <string>
 #include<stdio.h>
+#include <iterator>
+#include <stdio.h>
+#include <string.h>
 using namespace std;
 
 vector<string> get_contents();
@@ -19,16 +22,14 @@ class tablero{
     tablero() {n = 0; m = 0;}
     ~tablero();
 };
-class Rectangulo{
-    public:
+struct Rectangulo{
     //pos. top left corner of the rectangle
     int posX, posY;
-    int x, y;
-    Rectangulo() {posY = 0; posX = 0; x = 0; y = 0;}
-    ~Rectangulo();
+    int r, c;
+    Rectangulo() {posY = 0; posX = 0; r = 0; c = 0;}
 };
-
-bool verify(Rectangulo a, Rectangulo b);
-
+bool inRange(int value, int min, int max);
+bool verify(Rectangulo A, Rectangulo B);
+bool cmp(Rectangulo A, Rectangulo B);
 
 #endif
