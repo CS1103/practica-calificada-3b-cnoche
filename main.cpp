@@ -8,6 +8,6 @@ using namespace std;
 int main() {
     vector<string> data;
     data = get_contents();
-    vector<string> out;
+    vector<Rectangulo> out;
     out = organize(data);
 }

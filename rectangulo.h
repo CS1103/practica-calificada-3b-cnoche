@@ -3,24 +3,29 @@
 
 #include <iostream>
 #include <fstream>
+#include <bits/stdc++.h> 
 #include <vector>
 #include <sstream>
 #include <string>
-#include<stdio.h>
+#include <stdio.h>
 #include <iterator>
+#include <algorithm>
 #include <stdio.h>
 #include <string.h>
 using namespace std;
+bool inRange(int value, int min, int max);
+bool verify(Rectangulo A, Rectangulo B);
+bool cmp(Rectangulo A, Rectangulo B);
+
 
 vector<string> get_contents();
 
-vector<string> organize(vector<string> data);
+vector<Rectangulo> organize(vector<string> data);
 
-class tablero{
+struct tablero{
     public:
     int n, m = 0;
     tablero() {n = 0; m = 0;}
-    ~tablero();
 };
 struct Rectangulo{
     //pos. top left corner of the rectangle
@@ -28,8 +33,6 @@ struct Rectangulo{
     int r, c;
     Rectangulo() {posY = 0; posX = 0; r = 0; c = 0;}
 };
-bool inRange(int value, int min, int max);
-bool verify(Rectangulo A, Rectangulo B);
-bool cmp(Rectangulo A, Rectangulo B);
+
 
 #endif
