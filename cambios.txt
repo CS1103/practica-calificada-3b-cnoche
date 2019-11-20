@@ -1,0 +1,8 @@
+1.  En "booleans.pp", en la función cmp, se cambió el "&" en ambos parametros
+    de la función
+2.  En "rectangulos.h" se cambió el orden de la declaración de los objetos
+     y la función.
+3.  En "read.cpp" en la función "write" se cambió en la linea 29 de
+     'A ' a "A ".
+4.  En "rectangulo.cpp" se le quitó un espacio a "vector <Rectangulo>" en 
+    la linea 6. 

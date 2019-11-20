@@ -14,9 +14,6 @@
 #include <string.h>
 using namespace std;
 
-
-vector<Rectangulo> organize(vector<string> data);
-
 struct tablero{
     public:
     int n, m = 0;
@@ -28,6 +25,9 @@ struct Rectangulo{
     int r, c;
     Rectangulo() {posY = 0; posX = 0; r = 0; c = 0;}
 };
+
+vector<Rectangulo> organize(vector<string> data);
+
 
 
 #endif

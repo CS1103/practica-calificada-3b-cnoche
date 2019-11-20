@@ -26,7 +26,7 @@ vector<string> get_contents(){
 void write(vector<Rectangulo> data){
     ofstream outfile ("rectangulos2.out");
     for (auto &i:data){
-        outfile << 'A ' << i.posX << ' ' << i.posY << ' ' << i.r << ' ' << i.c << ' ' << '\n';
+        outfile << "A " << i.posX << ' ' << i.posY << ' ' << i.r << ' ' << i.c << ' ' << '\n';
     }
 
     outfile.close();

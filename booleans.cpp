@@ -1,7 +1,7 @@
 #include "rectangulo.h"
 #include "booleans.h"
 
-bool comp(Rectangulo& A, Rectangulo& B){
+bool comp(Rectangulo A, Rectangulo B){
     return (A.posX < B.posX) ||
            ((A.posX == B.posX) && (A.r < B.r)) || 
            ((A.posX == B.posX) && (A.r == B.r) &&

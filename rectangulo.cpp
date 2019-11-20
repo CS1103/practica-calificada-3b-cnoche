@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector <Rectangulo> organize(vector<string> data){
+vector<Rectangulo> organize(vector<string> data){
     vector <int> sizes;
     tablero tab;
     int reg;
